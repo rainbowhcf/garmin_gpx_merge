@@ -25,3 +25,5 @@ for waypoint in gpx2.waypoints:
 # 将合并后的gpx数据写入新的gpx文件中
 with open(dir + 'merge.gpx', 'w', encoding='UTF-8') as merged_file:
     merged_file.write(gpx1.to_xml())
+
+test = open(dir + 'merge.gpx', 'r', encoding='utf-8')
