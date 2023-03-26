@@ -1,0 +1,18 @@
+name: garmin_gpx_merge
+
+on:
+  workflow_dispatch:
+
+jobs:
+  checkin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.8.5
+          cache: 'pip'
+      - name: Install dependencies
+        run: pip install gpxpy
+      - name: Run
+        run: python merge.py
