@@ -22,6 +22,9 @@ for route in gpx2.routes:
 # 将第二个gpx文件中的所有航点添加到第一个gpx文件中
 for waypoint in gpx2.waypoints:
     gpx1.waypoints.append(waypoint)
+    
+# 确保目标目录存在
+os.makedirs(os.path.join(os.environ['HOME'], 'files'), exist_ok=True)
 
 # 将合并后的gpx数据写入新的gpx文件中
 with open(os.path.join(os.environ['HOME'], 'files', 'merge.gpx'), 'w') as merged_file:
