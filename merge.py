@@ -24,8 +24,10 @@ for waypoint in gpx2.waypoints:
     gpx1.waypoints.append(waypoint)
     
 # 将合并后的gpx数据写入新的gpx文件中
-with open('/home/runner/work/garmin_gpx_merge/garmin_gpx_merge/files/merge.gpx', 'w') as merged_file:
+with open('/home/runner/work/garmin_gpx_merge/garmin_gpx_merge/files/merge.gpx', 'w', encoding='UTF-8') as merged_file:
     merged_file.write(gpx1.to_xml())
+
+print(os.path.exists('/home/runner/work/garmin_gpx_merge/garmin_gpx_merge/files/merge.gpx'))
 
 # # 存储文件到本地，避免临时文件被清理
 # if os.path.exists('merge.gpx'):
