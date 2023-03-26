@@ -23,6 +23,8 @@ for route in gpx2.routes:
 for waypoint in gpx2.waypoints:
     gpx1.waypoints.append(waypoint)
     
+print(os.getcwd())
+    
 # 确保目标目录存在
 os.makedirs(os.path.join(os.environ['HOME'], 'files'), exist_ok=True)
 
