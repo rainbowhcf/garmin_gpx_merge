@@ -23,13 +23,8 @@ for route in gpx2.routes:
 for waypoint in gpx2.waypoints:
     gpx1.waypoints.append(waypoint)
     
-print(os.getcwd())
-    
-# 确保目标目录存在
-os.makedirs(os.path.join(os.environ['HOME'], 'files'), exist_ok=True)
-
 # 将合并后的gpx数据写入新的gpx文件中
-with open(os.path.join(os.environ['HOME'], 'files', 'merge.gpx'), 'w') as merged_file:
+with open('/home/runner/work/garmin_gpx_merge/garmin_gpx_merge/files/merge.gpx', 'w') as merged_file:
     merged_file.write(gpx1.to_xml())
 
 # # 存储文件到本地，避免临时文件被清理
