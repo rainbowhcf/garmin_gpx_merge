@@ -23,6 +23,8 @@ for route in gpx2.routes:
 for waypoint in gpx2.waypoints:
     gpx1.waypoints.append(waypoint)
     
+print(os.path.abspath('.'))
+    
 # 将合并后的gpx数据写入新的gpx文件中
 with open('/home/runner/work/garmin_gpx_merge/garmin_gpx_merge/files/merge.gpx', 'w', encoding='UTF-8') as merged_file:
     merged_file.write(gpx1.to_xml())
