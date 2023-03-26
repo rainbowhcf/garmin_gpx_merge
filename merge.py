@@ -28,4 +28,7 @@ with open('merge.gpx', 'w', encoding='UTF-8') as merged_file:
     merged_file.write(gpx1.to_xml())
 
 # 存储文件到本地，避免临时文件被清理
-os.rename('merge.gpx', os.path.join(os.environ['HOME'], 'files', 'merge.gpx'))
+if os.path.exists('merge.gpx'):
+    # 移动文件
+    os.makedirs(os.path.join(os.environ['HOME'], 'files'), exist_ok=True)
+    os.rename('merge.gpx', os.path.join(os.environ['HOME'], 'files', 'merge.gpx'))
