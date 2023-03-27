@@ -33,6 +33,8 @@ with open('/home/runner/work/garmin_gpx_merge/garmin_gpx_merge/files/merge.gpx',
 os.makedirs(os.path.join(os.environ['HOME'], "files"), exist_ok=True)
 os.rename('/home/runner/work/garmin_gpx_merge/garmin_gpx_merge/files/merge.gpx', os.path.join(os.environ['HOME'], "files", "merge.gpx"))
 
+print(os.path.abspath(os.environ['HOME']))
+
 print(os.path.exists('/home/runner/work/garmin_gpx_merge/garmin_gpx_merge/files/merge.gpx'))
 print(os.path.abspath('/home/runner/work/garmin_gpx_merge/garmin_gpx_merge/files/1.gpx'))
 print(os.path.abspath('/home/runner/work/garmin_gpx_merge/garmin_gpx_merge/files/2.gpx'))
