@@ -24,6 +24,5 @@ for waypoint in gpx2.waypoints:
     gpx1.waypoints.append(waypoint)
 
 # 将合并后的gpx数据写入新的gpx文件中
-os.makedirs(os.path.join(os.environ['HOME'], "files"), exist_ok=True)
-with open(os.path.join(os.environ['HOME'], "files", "merge.gpx"), 'w', encoding='UTF-8') as merged_file:
+with open("./files/merge.gpx"), 'w', encoding='UTF-8') as merged_file:
     merged_file.write(gpx1.to_xml())
