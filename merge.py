@@ -28,6 +28,10 @@ print(os.path.abspath('.'))
 # 将合并后的gpx数据写入新的gpx文件中
 with open('/home/runner/work/garmin_gpx_merge/garmin_gpx_merge/files/merge.gpx', 'w', encoding='UTF-8') as merged_file:
     merged_file.write(gpx1.to_xml())
+    
+# 将文件移动到 GitHub Actions 工作目录之外的目录中
+os.makedirs(os.path.join(os.environ['HOME'], "files"), exist_ok=True)
+os.rename(file_path, os.path.join(os.environ['HOME'], "files", "merge.gpx"))
 
 print(os.path.exists('/home/runner/work/garmin_gpx_merge/garmin_gpx_merge/files/merge.gpx'))
 print(os.path.abspath('/home/runner/work/garmin_gpx_merge/garmin_gpx_merge/files/1.gpx'))
