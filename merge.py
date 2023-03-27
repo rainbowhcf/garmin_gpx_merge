@@ -30,6 +30,8 @@ with open('/home/runner/work/garmin_gpx_merge/garmin_gpx_merge/files/merge.gpx',
     merged_file.write(gpx1.to_xml())
 
 print(os.path.exists('/home/runner/work/garmin_gpx_merge/garmin_gpx_merge/files/merge.gpx'))
+print(os.path.exists('/home/runner/work/garmin_gpx_merge/garmin_gpx_merge/files/1.gpx'))
+print(os.path.exists('/home/runner/work/garmin_gpx_merge/garmin_gpx_merge/files/2.gpx'))
 
 # # 存储文件到本地，避免临时文件被清理
 # if os.path.exists('merge.gpx'):
