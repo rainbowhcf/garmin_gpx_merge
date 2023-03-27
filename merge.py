@@ -31,7 +31,7 @@ with open('/home/runner/work/garmin_gpx_merge/garmin_gpx_merge/files/merge.gpx',
     
 # 将文件移动到 GitHub Actions 工作目录之外的目录中
 os.makedirs(os.path.join(os.environ['HOME'], "files"), exist_ok=True)
-os.rename(file_path, os.path.join(os.environ['HOME'], "files", "merge.gpx"))
+os.rename('/home/runner/work/garmin_gpx_merge/garmin_gpx_merge/files/merge.gpx', os.path.join(os.environ['HOME'], "files", "merge.gpx"))
 
 print(os.path.exists('/home/runner/work/garmin_gpx_merge/garmin_gpx_merge/files/merge.gpx'))
 print(os.path.abspath('/home/runner/work/garmin_gpx_merge/garmin_gpx_merge/files/1.gpx'))
