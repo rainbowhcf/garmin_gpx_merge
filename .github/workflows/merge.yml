@@ -17,3 +17,9 @@ jobs:
           pip install -r requirements.txt
       - name: Run
         run: python merge.py
+      - name: Upload GPX file as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: merged-gpx
+          path: /home/runner/files/merge.gpx
+
